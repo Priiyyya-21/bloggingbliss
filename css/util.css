@@ -7,6 +7,14 @@
     --font2: 'Roboto', sans-serif;
 }
 
+.font1 {
+    font-family: var(--font1);
+}
+
+.font2 {
+    font-family: var(--font2);
+}
+
 .max-width-1 {
     max-width: 80vw;
 }
@@ -20,8 +28,12 @@
     margin: auto;
 }
 
+.my-2{
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
 .btn {
-    padding: 0px 15px;
+    padding: 0 9px;
     padding-top: 3px;
     font-size: 12px;
     border: 2px solid black;
