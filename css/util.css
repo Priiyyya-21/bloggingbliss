@@ -32,6 +32,10 @@
     margin-bottom: 12px;
     margin-top: 12px;
 }
+.my-1{
+    margin-left: 60px;
+    margin-right: 50px;
+}
 .btn {
     padding: 0 9px;
     padding-top: 3px;
@@ -60,6 +64,11 @@
 }
 .form-box input ,textarea{
     width:52vw;
-    padding: 10px 6px;
-    margin:7px;
+    padding: 4px 6px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 8px;
+    margin:7px 0;
+    font-size: 15px;
+    font-family: var(--font1);
 }

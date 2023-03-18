@@ -1,11 +1,12 @@
 
 .contact-content {
-    height: 800px;
+    height: 1000px;
+    height:100vh;
     display: flex;
-    /* background-color: rgb(214, 224, 236); */
     margin-top: 45px;
     padding: 10px;
     position: relative;
+    overflow:hidden;
 }
 
 .contact-content::after {

@@ -80,6 +80,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 50px;
+    z-index: 1;
 }
 
 .content-right {
