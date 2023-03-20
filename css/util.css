@@ -6,7 +6,9 @@
     --font1: 'Baloo Bhaina 2', cursive;
     --font2: 'Roboto', sans-serif;
 }
-
+.center{
+    text-align: center;
+}
 .font1 {
     font-family: var(--font1);
 }
@@ -69,6 +71,6 @@
     border-radius: 5px;
     box-shadow: 8px;
     margin:7px 0;
-    font-size: 15px;
+    font-size: 12px;
     font-family: var(--font1);
 }

@@ -105,13 +105,30 @@
 
 .content-articles {
     padding: 18px;
-    background-color: rgb(226, 208, 242,0.5);
+    background-color: rgb(226, 208, 242, 0.5);
     margin-top: 23px;
+    position: relative;
+}
+
+.year-box {
+    position: absolute;
+    width: 234px;
+    height: 255px;
+    right: 9px;
+    top: 100px;
+    text-align: center;
+    font-size: 16px;
+    /* background-color: red; */
+}
+
+.year-box h3,div {
+    margin: 12px 0px;
+
 }
 
 .home-article img {
     margin: 10px;
-    width: 300px;
+    width: 260px;
 
 }
 
@@ -124,9 +141,10 @@
     align-self: center;
     padding: 25px;
 }
-.home-article-content a{
+
+.home-article-content a {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 /* footer */

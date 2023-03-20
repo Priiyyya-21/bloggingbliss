@@ -1,10 +1,38 @@
-.post-img{
-    height:440px;
+.post-img {
+    height: 404px;
     overflow: hidden;
-    margin-top: 14px;
+    /* margin-top: 14px; */
 }
-.post-img img{
+
+.post-img img {
     width: 100%;
+}
 
+.blog-post-content {
+    /* background-color: red;  */
+    padding: 10px;
+}
 
+.blogpost-meta {
+    background-color: red;
+    display: flex;
+}
+
+.blog-post-content h1 {
+    text-align: center;
+}
+
+.blog-post-content p {
+    font-size: 18px;
+}
+
+.row {
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+}
+
+.more-post {
+    flex-direction: column;
+    align-items: center;
 }
