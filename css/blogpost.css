@@ -14,8 +14,18 @@
 }
 
 .blogpost-meta {
-    background-color: red;
+    /* background-color: red; */
     display: flex;
+    justify-content: space-between;
+    font-size:17px ;
+    /* padding:12px; */
+}
+.author-info{
+    margin:12px 0;
+}
+.author-info div{
+    padding: 4px 0px;
+    font-family: var(--font2);
 }
 
 .blog-post-content h1 {
