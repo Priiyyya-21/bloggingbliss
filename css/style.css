@@ -20,6 +20,12 @@
 
 }
 
+.nav-left img {
+    padding-top: 30px;
+    height: 60px;
+    width: 60px;
+}
+
 .nav-left span {
     font-size: 30px;
     font-weight: bold;
@@ -83,6 +89,9 @@
     z-index: 1;
 }
 
+.content-left p{
+    font-size: 18px;
+}
 .content-right {
     /* font-family: var(--font1); */
 
@@ -105,12 +114,16 @@
 
 .content-articles {
     padding: 18px;
-    background-color: rgb(226, 208, 242, 0.5);
+    /* background-color: rgb(226, 208, 242, 0.5); */
     margin-top: 23px;
     position: relative;
 }
 
-.year-box {
+.Featured-Article {
+    margin: 35px;
+}
+
+.Author-details {
     position: absolute;
     width: 234px;
     height: 255px;
@@ -121,15 +134,16 @@
     /* background-color: red; */
 }
 
-.year-box h3,div {
+.Author-details h3,
+div {
     margin: 12px 0px;
 
 }
 
 .home-article img {
     margin: 10px;
-    width: 260px;
-
+    width: 150px;
+    border-radius: 8px;
 }
 
 .home-article {
@@ -138,13 +152,26 @@
 }
 
 .home-article-content {
-    align-self: center;
-    padding: 25px;
+    /* align-self: center; */
+    padding: 16px;
 }
 
 .home-article-content a {
     text-decoration: none;
     color: black;
+}
+
+.author-info {
+    font-size: 14px;
+    display: flex;
+    justify-content: right;
+}
+
+/* About Us */
+.about-us{
+    background-color: red;
+    height: 200px;
+    width: 200px;
 }
 
 /* footer */
