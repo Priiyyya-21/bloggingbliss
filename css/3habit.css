@@ -11,6 +11,7 @@
 .blog-post-content {
     /* background-color: red;  */
     padding: 10px;
+    font-family: var(--font2);
 }
 
 .blogpost-meta {
@@ -24,12 +25,12 @@
     margin:12px 0;
 }
 .author-info div{
-    padding: 4px 0px;
+    padding: 4px 4px;
     font-family: var(--font2);
 }
 
 .blog-post-content h1 {
-    text-align: center;
+    text-align: left;
 }
 
 .blog-post-content p {
