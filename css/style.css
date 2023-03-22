@@ -7,8 +7,7 @@
 .navigation {
     margin-top: 25px;
     font-family: var(--font1);
-    height: 74px;
-    /* background-color: royalblue; */
+    /* height: 74px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
