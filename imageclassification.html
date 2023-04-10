@@ -1,150 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/util.css">
-    <link rel="stylesheet" href="css/imageclassification.css">
-    <link rel="stylesheet" href="css/mobile.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/util.css" />
+    <link rel="stylesheet" href="css/imageclassification.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
     <title>Image Classifier | BloggingBliss</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- navigation -->
     <nav class="navigation max-width-1 m-auto my-2">
-        <div class="nav-left">
-            <span> <img src="images/newll.png" alt="logo"></span>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="nav-right">
-            <form action="/search.html" method="get">
-                <input class="form-input" type="text" name="query" placeholder="Article Search">
-                <button class="btn">Search </button>
-            </form>
-
-        </div>
+      <div class="nav-left">
+        <span> <img src="images/newll.png" alt="logo" /></span>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <form action="/search.html" method="get">
+          <input
+            class="form-input"
+            type="text"
+            name="query"
+            placeholder="Article Search"
+          />
+          <button class="btn">Search</button>
+        </form>
+      </div>
     </nav>
 
-    <div class="max-width-1  m-auto my-2">
-        <hr>
+    <div class="max-width-1 m-auto my-2">
+      <hr />
     </div>
-    <div class="post-img max-width-1  m-auto">
-        <img src="images/landscapeimageclassification.png" alt="imageclassification-image">
+    <div class="post-img max-width-1 m-auto">
+      <img
+        src="images/landscapeimageclassification.png"
+        alt="imageclassification-image"
+      />
     </div>
     <!-- content -->
-    <div class="blog-post-content max-width-2  m-auto my-2">
-        <h1 class="font2"><b>Image Classification </b></h1>
-        <div class="blogpost-meta">
-            <div class="author-info">
-                <div>Suyash Kapil | March 12 </div>
-            </div>
-
+    <div class="blog-post-content max-width-2 m-auto my-2">
+      <h1 class="font2"><b>Image Classification </b></h1>
+      <div class="blogpost-meta">
+        <div class="author-info">
+          <div>Suyash Kapil | March 12</div>
         </div>
+      </div>
 
-        <div class="font2">
-            <p>Your phone unlocks as soon as it recognizes your face, Google lens detects an object and searches about
-                the object on the internet, Google translate reads what you write on a piece of paper and translates it,
-                Google photos detect the people in your gallery and groups the photos accordingly. How does all this
-                happen?</p>
-            <br>
-            <img src="images/landscapeimageclassification.png" alt=""> <br> <br>
-            <h4>Pixels</h4> <br>
-            <p>Each image is divided into tiny undividable squares called pixels. These pixels are of different colors
-                and intensities. A 3x3 picture contains 9 pixels, as shown below. One RGB pixel is represented as a 1x3
-                matrix ( It has three channels while the grayscale images have only one), with the three numbers
-                representing red, green, and blue intensities, respectively. [1,0,0] means there is no green or blue
-                color, just entirely red. Changing the numbers from 0 to 1 changes the intensity of the colors. Mixing
-                these colors form a new color. [1,0,1] will create a color created by combining red and blue. This is
-                just a small example; HD pictures contain millions of pixels. One megapixel has a million pixels!
-            </p>
-            <br>
-            <img src="images/imgclassification-1.png" alt="imgclassification-1">
-            <br> <br>
-            <img src="images/imgclassification-2.webp" alt="imgclassification-2">
-            <br> <br>
-            <p>RGB images are three-dimensional. The illustration below shows a 5x7 image having 35 RGB pixels. The
-                values of each element in each channel lie between 0 and 255 ( can be converted to values between 0 and
-                1 by dividing each value by 255). The dimension of the image below is (5,7,3).</p> <br>
-            <img src="images/imgclassification-3.webp" alt="imgclassification-3">
-            <h4>Features</h4> <br>
-            <p>Ever wondered how do you differentiate between a car and a truck? You look for the features. They differ
-                in size, number of wheels, and body shape.</p> <br>
-            <img src="images/imgclassification-4.webp" alt="imgclassification-4"> <br><br>
-            <img src="images/imgclassification-5.webp" alt="imgclassification-5"> <br><br>
-            <p>How do you identify these features? You often extract these features using the outlines(edges). If you
-                look at the car body (red) in the picture above, the edge of the car body separates it from the windows
-                and the wheels. The red color is separated by the blue color with a black curve(the edge). Your mind
-                then identifies that the red-colored part is the car body while the blue part is the car’s windows. You
-                know this because when you were very young, you were repeatedly shown car pictures and were told what
-                part is the body and what part is the window. So, you first extract different features( wheels, body,
-                windows, and bonnet), then identify them. You know that the body and wheels of a truck are much larger
-                than a car, and the body structure of a truck differs significantly from a car’s.</p> <br>
-            <h4>Image Processing</h4> <br>
-            <p>A kernel matrix is used for edge detection, sharpening, blurring, and other valuable tasks. It is a
-                square matrix that, on convolution with an input image, gives an output image called a feature map with
-                the applied effects (like edge detection). The kernel matrix elements are generally chosen such that
-                they all add up to 0 or 1.</p> <br>
-            <img src="images/imgclassification-6.png" alt="imgclassification-4"> <br><br>
-        </div>
+      <div class="font2">
+        <p>
+          Your phone unlocks as soon as it recognizes your face, Google lens
+          detects an object and searches about the object on the internet,
+          Google translate reads what you write on a piece of paper and
+          translates it, Google photos detect the people in your gallery and
+          groups the photos accordingly. How does all this happen?
+        </p>
+        <br />
+
+        <h4>Pixels</h4>
+        <br />
+        <p>
+          Each image is divided into tiny undividable squares called pixels.
+          These pixels are of different colors and intensities. A 3x3 picture
+          contains 9 pixels, as shown below. One RGB pixel is represented as a
+          1x3 matrix ( It has three channels while the grayscale images have
+          only one), with the three numbers representing red, green, and blue
+          intensities, respectively. [1,0,0] means there is no green or blue
+          color, just entirely red. Changing the numbers from 0 to 1 changes the
+          intensity of the colors. Mixing these colors form a new color. [1,0,1]
+          will create a color created by combining red and blue. This is just a
+          small example; HD pictures contain millions of pixels. One megapixel
+          has a million pixels!
+        </p>
+        <br />
+        <img src="images/imgclassification-1.png" alt="imgclassification-1" />
+        <br />
+        <br />
+        <img src="images/imgclassification-2.webp" alt="imgclassification-2" />
+        <br />
+        <br />
+        <p>
+          RGB images are three-dimensional. The illustration below shows a 5x7
+          image having 35 RGB pixels. The values of each element in each channel
+          lie between 0 and 255 ( can be converted to values between 0 and 1 by
+          dividing each value by 255). The dimension of the image below is
+          (5,7,3).
+        </p>
+        <br />
+        <img src="images/imgclassification-3.webp" alt="imgclassification-3" />
+        <h4>Features</h4>
+        <br />
+        <p>
+          Ever wondered how do you differentiate between a car and a truck? You
+          look for the features. They differ in size, number of wheels, and body
+          shape.
+        </p>
+        <br />
+        <img src="images/imgclassification-4.webp" alt="imgclassification-4" />
+        <br /><br />
+        <img src="images/imgclassification-5.webp" alt="imgclassification-5" />
+        <br /><br />
+        <p>
+          How do you identify these features? You often extract these features
+          using the outlines(edges). If you look at the car body (red) in the
+          picture above, the edge of the car body separates it from the windows
+          and the wheels. The red color is separated by the blue color with a
+          black curve(the edge). Your mind then identifies that the red-colored
+          part is the car body while the blue part is the car’s windows. You
+          know this because when you were very young, you were repeatedly shown
+          car pictures and were told what part is the body and what part is the
+          window. So, you first extract different features( wheels, body,
+          windows, and bonnet), then identify them. You know that the body and
+          wheels of a truck are much larger than a car, and the body structure
+          of a truck differs significantly from a car’s.
+        </p>
+        <br />
+        <h4>Image Processing</h4>
+        <br />
+        <p>
+          A kernel matrix is used for edge detection, sharpening, blurring, and
+          other valuable tasks. It is a square matrix that, on convolution with
+          an input image, gives an output image called a feature map with the
+          applied effects (like edge detection). The kernel matrix elements are
+          generally chosen such that they all add up to 0 or 1.
+        </p>
+        <br />
+        <img src="images/imgclassification-6.png" alt="imgclassification-4" />
+        <br /><br />
+      </div>
     </div>
 
-
-    <div class="content-articles  max-width-1 m-auto my-2 font2">
-        <h2>People who read this also read</h2>
-        <div class="row">
-            <div class="home-article more-post">
-                <div class="home-article-img">
-                    <img src="images/chatgpt.png" alt="article">
-                </div>
-                <div class="home-article-content font2 center">
-                    <a href="/chatgpt.html">
-                        <h3>Can ChatGPT Write Better SQL than a Data Analyst?</h3>
-                    </a>
-                    <div> Marie Truong</div>
-                    <span style="color:rgb(97, 97, 97)">5th Jan | 6 min read</span>
-                </div>
-            </div>
-
-            <div class="home-article more-post">
-                <div class="home-article-img">
-                    <img src="images/machinelearning.png" alt="article">
-                </div>
-                <div class="home-article-content font2 center">
-                    <a href="/machinelearning.html">
-                        <h3>How to become very good at Machine Learning</h3>
-                    </a>
-                    <div>Devansh</div>
-                    <span style="color:rgb(97, 97, 97)">14 March | 5 min read</span>
-                </div>
-            </div>
-
-            <div class="home-article more-post">
-                <div class="home-article-img">
-                    <img src="images/3habits.png" alt="article">
-                </div>
-                <div class="home-article-content font2 center">
-                    <a href="/3habit.html">
-                        <h3>3 Habits That Sabotage Your Life</h3>
-                    </a>
-                    <div>Darius Foroux</div>
-                    <span style="color:rgb(97, 97, 97)">6th Jan | 6 min read</span>
-                </div>
-            </div>
+    <div class="content-articles max-width-1 m-auto my-2 font2">
+      <h2>People who read this also read</h2>
+      <div class="row">
+        <div class="home-article more-post">
+          <div class="home-article-img">
+            <img src="images/chatgpt.png" alt="article" />
+          </div>
+          <div class="home-article-content font2 center">
+            <a href="/chatgpt.html">
+              <h3>Can ChatGPT Write Better SQL than a Data Analyst?</h3>
+            </a>
+            <div>Marie Truong</div>
+            <span style="color: rgb(97, 97, 97)">5th Jan | 6 min read</span>
+          </div>
         </div>
+
+        <div class="home-article more-post">
+          <div class="home-article-img">
+            <img src="images/machinelearning.png" alt="article" />
+          </div>
+          <div class="home-article-content font2 center">
+            <a href="/machinelearning.html">
+              <h3>How to become very good at Machine Learning</h3>
+            </a>
+            <div>Devansh</div>
+            <span style="color: rgb(97, 97, 97)">14 March | 5 min read</span>
+          </div>
+        </div>
+
+        <div class="home-article more-post">
+          <div class="home-article-img">
+            <img src="images/3habits.png" alt="article" />
+          </div>
+          <div class="home-article-content font2 center">
+            <a href="/3habit.html">
+              <h3>3 Habits That Sabotage Your Life</h3>
+            </a>
+            <div>Darius Foroux</div>
+            <span style="color: rgb(97, 97, 97)">6th Jan | 6 min read</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- footer -->
-    <div class="footer ">
-        <p>Copyright &copy BloggingBliss </p>
-        <!-- <a href="images/laptop.jpg">credits</a> -->
+    <div class="footer">
+      <p>Copyright &copy BloggingBliss</p>
+      <!-- <a href="images/laptop.jpg">credits</a> -->
     </div>
-</body>
-
+  </body>
 </html>
