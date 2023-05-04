@@ -19,12 +19,12 @@
       <span> <img src="images/newll.png" alt="logo" /></span>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a onclick="contact()">Contact</a></li>
       </ul>
     </div>
     <div class="nav-right">
-      <form action="/search.html" method="get">
+      <form action="/search" method="get">
         <input class="form-input" type="text" name="query" placeholder="Article Search" />
         <button class="btn">Search</button>
       </form>
@@ -174,12 +174,12 @@
   <div class="content-articles  max-width-1 m-auto my-2 font2">
     <h2>People who read this also read</h2>
     <div class="row">
-      <div class="home-article more-post">
+      <div class="home-article more-post" onclick="chatgpt()">
         <div class="home-article-img">
           <img src="images/chatgpt.png" alt="article">
         </div>
         <div class="home-article-content font2 center">
-          <a href="/chatgpt.html">
+          <a>
             <h3>Can ChatGPT Write Better SQL than a Data Analyst?</h3>
           </a>
           <div> Marie Truong</div>
@@ -187,12 +187,12 @@
         </div>
       </div>
 
-      <div class="home-article more-post">
+      <div class="home-article more-post" onclick="codingwontexist()">
         <div class="home-article-img">
           <img src="images/codingwon'texist.png" alt="article">
         </div>
         <div class="home-article-content font2 center">
-          <a href="/codingwontexist.html">
+          <a>
             <h3>Coding Won’t Exist In 5 Years. This Is Why.</h3>
           </a>
           <div>Somnath Singh</div>
@@ -200,12 +200,12 @@
         </div>
       </div>
 
-      <div class="home-article more-post">
+      <div class="home-article more-post" onclick="habit3()">
         <div class="home-article-img">
           <img src="images/3habits.png" alt="article">
         </div>
         <div class="home-article-content font2 center">
-          <a href="/3habit.html">
+          <a>
             <h3>3 Habits That Sabotage Your Life</h3>
           </a>
           <div>Darius Foroux</div>
@@ -220,6 +220,21 @@
     <p>Copyright &copy BloggingBliss</p>
     <!-- <a href="images/laptop.jpg">credits</a> -->
   </div>
+
+  <script>
+    function contact() {
+      location.href = "http://" + window.location.host + "/contact";
+    }
+    function chatgpt() {
+      location.href = "http://" + window.location.host + "/chatgpt";
+    }
+    function codingwontexist() {
+      location.href = "http://" + window.location.host + "/codingwontexist";
+    }
+    function habit3() {
+      location.href = "http://" + window.location.host + "/3habit";
+    }
+  </script>
 </body>
 
 </html>

@@ -18,12 +18,12 @@
             <span> <img src="images/newll.png" alt="logo"></span>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a onclick="contact()">Contact</a></li>
             </ul>
         </div>
         <div class="nav-right">
-            <form action="/search.html" method="get">
+            <form>
                 <input class="form-input" type="text" name="query" placeholder="Article Search">
                 <button class="btn">Search </button>
             </form>
@@ -41,12 +41,12 @@
 
         <h2>Search Results (0.03 seconds)</h2>
 
-        <div class="home-article">
+        <div class="home-article" onclick="imageclassification()">
             <div class="home-article-img">
                 <img src="images/imageclassification.png" alt="article">
             </div>
             <div class="home-article-content font1">
-                <a href="/imageclassification.html">
+                <a>
                     <h3>Image Classification</h3>
                     <p>Your phone unlocks as soon as it recognizes your face, Google lens detects an object and searches
                         about the object on the internet, Google translate reads what you write on a piece....
@@ -57,12 +57,12 @@
             </div>
         </div>
 
-        <div class="home-article">
+        <div class="home-article" onclick="ml()">
             <div class="home-article-img">
                 <img src="images/machinelearning.png" alt="article">
             </div>
             <div class="home-article-content font1">
-                <a href="/machinelearning.html">
+                <a>
                     <h3>How to become very good at Machine Learning</h3>
                     <p>How I taught myself complex ideas in Data Science, Machine Learning, and Computer Science.If
                         you’re not an ML person, replace ML papers with deep technical blogs/talks in your area......
@@ -72,12 +72,12 @@
             </div>
         </div>
 
-        <div class="home-article">
+        <div class="home-article" onclick="chatgpt()">
             <div class="home-article-img">
                 <img src="images/chatgpt.png" alt="article">
             </div>
             <div class="home-article-content font1">
-                <a href="/chatgpt.html">
+                <a>
                     <h3>Can ChatGPT Write Better SQL than a Data Analyst?</h3>
                     <p>I tried ChatGPT, a variant of the GPT-3 language model that is specifically designed for
                         generating human-like text in a conversational context.....</p>
@@ -87,12 +87,12 @@
             </div>
         </div>
 
-        <div class="home-article">
+        <div class="home-article" onclick="codingwontexist()">
             <div class="home-article-img">
                 <img src="images/codingwon'texist.png" alt="article">
             </div>
             <div class="home-article-content font1">
-                <a href="/codingwontexist.html">
+                <a>
                     <h3>Coding Won’t Exist In 5 Years. This Is Why</h3>
                     <p>Once upon a time, in a world not too different from ours, handmade clothing was the norm.
                         Skilled artisans would spend countless hours creating beautiful garments.....</p>
@@ -109,6 +109,24 @@
         <p>Copyright &copy BloggingBliss </p>
         <!-- <a href="images/laptop.jpg">credits</a> -->
     </div>
+
+    <script>
+        function contact() {
+            location.href = "http://" + window.location.host + "/contact";
+        }
+        function imageclassification() {
+            location.href = "http://" + window.location.host + "/imageclassification";
+        }
+        function ml() {
+            location.href = "http://" + window.location.host + "/ml";
+        }
+        function chatgpt() {
+            location.href = "http://" + window.location.host + "/chatgpt";
+        }
+        function codingwontexist() {
+            location.href = "http://" + window.location.host + "/codingwontexist";
+        }
+    </script>
 </body>
 
 </html>
