@@ -40,6 +40,3 @@ Contact
 
 If you have any questions or feedback, please contact us. We'd love to hear from you!
 
----
-
-This README provides an overview of the Blogging Bliss platform, its features, installation instructions, usage guide, and information on how to contribute and license. It also includes contact information for getting in touch with the project maintainers. By providing clear and concise information in your README, you can help others understand your project and encourage collaboration and contribution.
