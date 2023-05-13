@@ -36,7 +36,8 @@ We welcome contributions from the community! If you'd like to contribute to Blog
 ## License
 
 Blogging Bliss is released under the MIT License. See LICENSE for more details.
-Contact
+
+## Contact
 
 If you have any questions or feedback, please contact us. We'd love to hear from you!
 
